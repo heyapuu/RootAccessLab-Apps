@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReSeen — Never Miss What Was Said | Official Download</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ReSeen — Never Miss What Was Said | Official App Download</title>
   
   <!-- SEO & Social OpenGraph Meta Tags -->
   <meta name="description" content="Download ReSeen v1.0.0 — Privacy-first deleted message and media recovery engine with 100% on-device zero-leak guarantee by Root Access Lab.">
@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Official APK Download for ReSeen v1.0.0. 100% on-device offline deleted chat & media recovery.">
   <meta name="twitter:image" content="https://heyapuu.github.io/RootAccessLab-Apps/assets/reseen_logo.png">
   <link rel="icon" type="image/png" href="https://heyapuu.github.io/RootAccessLab-Apps/assets/reseen_logo.png">
-  <meta name="theme-color" content="#0B0F19">
+  <meta name="theme-color" content="#07090E">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,25 +31,32 @@
   <style>
     :root {
       --bg-dark: #07090E;
-      --bg-card: rgba(18, 24, 38, 0.7);
+      --bg-surface: #0E131F;
+      --bg-card: rgba(17, 24, 39, 0.7);
       --border-card: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(6, 182, 212, 0.45);
       --accent-cyan: #06B6D4;
       --accent-emerald: #10B981;
-      --accent-purple: #8B5CF6;
-      --text-main: #F3F4F6;
-      --text-muted: #9CA3AF;
-      --gradient-glow: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.18) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 80%);
+      --accent-blue: #3B82F6;
+      --accent-glow: rgba(6, 182, 212, 0.25);
+      --text-main: #F9FAFB;
+      --text-sub: #E2E8F0;
+      --text-muted: #94A3B8;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
       background-color: var(--bg-dark);
-      background-image: var(--gradient-glow);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 20% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', sans-serif;
       min-height: 100vh;
@@ -60,89 +67,75 @@
       line-height: 1.6;
     }
 
-    /* Ambient Background Light */
-    .ambient-sphere {
-      position: absolute;
-      top: -150px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 700px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.12) 40%, transparent 70%);
-      filter: blur(80px);
-      z-index: -1;
-      pointer-events: none;
-    }
-
     .container {
       width: 100%;
-      max-width: 960px;
-      padding: 40px 24px;
+      max-width: 860px;
+      padding: 24px 16px 80px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* Top Brand Nav */
+    /* Header Nav */
     header {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 24px;
-      background: rgba(255, 255, 255, 0.03);
+      padding: 12px 18px;
+      background: rgba(14, 19, 31, 0.75);
       backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--border-card);
       border-radius: 99px;
-      margin-bottom: 48px;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
 
     .brand-identity {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
       color: #fff;
     }
 
     .brand-identity img {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 8px;
-      box-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
     }
 
     .brand-identity span {
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      font-size: 1.2rem;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
+      font-size: 1.1rem;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #FFFFFF 50%, var(--accent-cyan));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .badge-hub {
-      background: rgba(16, 185, 129, 0.15);
+      background: rgba(16, 185, 129, 0.12);
       border: 1px solid rgba(16, 185, 129, 0.3);
       color: #34D399;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 5px 12px;
       border-radius: 99px;
       display: flex;
       align-items: center;
       gap: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.3px;
     }
 
     .pulse-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background-color: #10B981;
       border-radius: 50%;
-      box-shadow: 0 0 10px #10B981;
+      box-shadow: 0 0 8px #10B981;
       animation: pulse 2s infinite;
     }
 
@@ -158,69 +151,75 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 56px;
+      width: 100%;
+      margin-bottom: 36px;
     }
 
     .app-icon-wrapper {
       position: relative;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 28px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(6, 182, 212, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 104px;
+      height: 104px;
+      border-radius: 26px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 32px rgba(6, 182, 212, 0.35);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      animation: float 4s ease-in-out infinite;
     }
 
-    .app-icon:hover {
-      transform: scale(1.05) translateY(-4px);
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
     }
 
     .hero-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 3.2rem;
+      font-size: clamp(2.4rem, 8vw, 3.4rem);
       font-weight: 900;
       letter-spacing: -1.5px;
+      line-height: 1.1;
       margin-bottom: 8px;
-      background: linear-gradient(180deg, #FFFFFF 20%, #CBD5E1 100%);
+      background: linear-gradient(180deg, #FFFFFF 30%, #CBD5E1 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero-tagline {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: clamp(1.1rem, 4vw, 1.35rem);
+      font-weight: 700;
       color: var(--accent-cyan);
-      margin-bottom: 16px;
-      letter-spacing: -0.2px;
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
     }
 
     .hero-desc {
-      max-width: 580px;
+      max-width: 540px;
       color: var(--text-muted);
-      font-size: 1rem;
-      margin-bottom: 32px;
+      font-size: clamp(0.92rem, 3.2vw, 1.02rem);
+      line-height: 1.55;
+      margin-bottom: 28px;
+      padding: 0 8px;
     }
 
-    /* Download Action Button */
+    /* Download Card (Mobile First) */
     .download-card {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      background: linear-gradient(160deg, rgba(22, 30, 48, 0.8) 0%, rgba(11, 15, 25, 0.95) 100%);
       backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
       border: 1px solid var(--border-card);
       border-radius: 24px;
-      padding: 32px;
+      padding: 24px 18px;
       width: 100%;
-      max-width: 520px;
+      max-width: 500px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.6);
       position: relative;
       overflow: hidden;
-      margin-bottom: 64px;
+      margin-bottom: 48px;
     }
 
     .download-card::before {
@@ -237,34 +236,35 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
       width: 100%;
+      min-height: 58px;
       background: linear-gradient(135deg, #06B6D4 0%, #0284C7 50%, #10B981 100%);
       color: #FFFFFF;
       font-family: 'Outfit', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.18rem;
       font-weight: 800;
       text-decoration: none;
-      padding: 18px 28px;
+      padding: 16px 20px;
       border-radius: 16px;
-      box-shadow: 0 12px 28px rgba(6, 182, 212, 0.35);
+      box-shadow: 0 10px 24px rgba(6, 182, 212, 0.35);
       transition: all 0.25s ease;
       cursor: pointer;
-      border: none;
+      text-align: center;
     }
 
-    .btn-download:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(6, 182, 212, 0.5);
-      filter: brightness(1.08);
+    .btn-download:active {
+      transform: scale(0.98);
+      filter: brightness(0.95);
     }
 
     .btn-download svg {
-      width: 26px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
       fill: none;
       stroke: currentColor;
-      stroke-width: 2.4;
+      stroke-width: 2.5;
       stroke-linecap: round;
       stroke-linejoin: round;
       animation: bounce 2s infinite ease-in-out;
@@ -272,116 +272,199 @@
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(4px); }
+      50% { transform: translateY(3px); }
     }
 
-    .meta-specs {
+    .meta-badges {
       display: flex;
-      gap: 16px;
-      margin-top: 18px;
       flex-wrap: wrap;
+      gap: 8px;
       justify-content: center;
-      font-size: 0.82rem;
-      color: var(--text-muted);
+      margin-top: 16px;
+      width: 100%;
     }
 
-    .spec-item {
+    .spec-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 5px 12px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
-    .spec-item strong {
-      color: #E2E8F0;
+    .spec-pill strong {
+      color: var(--text-sub);
     }
 
-    /* Features Grid */
+    .sub-actions {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .btn-sub {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn-sub:hover, .btn-sub:active {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* Section Headers */
     .section-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
+      font-size: clamp(1.4rem, 5vw, 1.8rem);
       font-weight: 800;
       text-align: center;
-      margin-bottom: 32px;
-      background: linear-gradient(135deg, #fff, #94A3B8);
+      margin-bottom: 22px;
+      background: linear-gradient(135deg, #FFFFFF, #94A3B8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
+    /* Features Grid (Responsive 1-col on mobile, 2-col on tablet/desktop) */
     .grid-features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr;
+      gap: 14px;
       width: 100%;
-      margin-bottom: 64px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 600px) {
+      .grid-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
     }
 
     .feature-card {
       background: var(--bg-card);
       border: 1px solid var(--border-card);
-      border-radius: 20px;
-      padding: 24px;
-      transition: all 0.3s ease;
+      border-radius: 18px;
+      padding: 18px;
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .feature-card:hover {
-      border-color: rgba(6, 182, 212, 0.4);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+      border-color: var(--border-hover);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
     }
 
-    .feature-icon {
-      font-size: 2rem;
-      margin-bottom: 14px;
-      display: inline-block;
-      padding: 10px;
+    .feature-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .feature-icon-box {
+      font-size: 1.5rem;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: rgba(255, 255, 255, 0.04);
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.08);
+      flex-shrink: 0;
     }
 
     .feature-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 8px;
+    }
+
+    .feature-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: rgba(6, 182, 212, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      margin-left: auto;
     }
 
     .feature-desc {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* 3-Step Install Guide */
     .guide-box {
       width: 100%;
-      max-width: 720px;
-      background: rgba(18, 24, 38, 0.5);
+      background: var(--bg-card);
       border: 1px solid var(--border-card);
       border-radius: 20px;
-      padding: 28px;
-      margin-bottom: 64px;
+      padding: 22px 18px;
+      margin-bottom: 48px;
     }
 
-    .steps-row {
+    .steps-list {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 20px;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .steps-list {
+        flex-direction: row;
+        gap: 12px;
+      }
     }
 
     .step-item {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 14px;
+      border-radius: 14px;
       flex: 1;
     }
 
+    @media (min-width: 640px) {
+      .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
     .step-number {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: rgba(6, 182, 212, 0.15);
       color: var(--accent-cyan);
@@ -390,128 +473,192 @@
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      margin-bottom: 10px;
+      font-size: 0.95rem;
       font-family: 'Outfit', sans-serif;
+      flex-shrink: 0;
     }
 
     .step-text {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
+      line-height: 1.45;
     }
 
-    /* Developer & Lab Showcase */
+    .step-text strong {
+      color: var(--text-sub);
+    }
+
+    /* Developer & Lab Card */
     .lab-card {
       width: 100%;
-      max-width: 720px;
-      background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%);
+      background: linear-gradient(180deg, rgba(22, 30, 48, 0.7) 0%, rgba(11, 15, 25, 0.9) 100%);
       border: 1px solid var(--border-card);
       border-radius: 24px;
-      padding: 36px;
+      padding: 28px 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 36px;
     }
 
     .avatar {
-      width: 88px;
-      height: 88px;
+      width: 82px;
+      height: 82px;
       border-radius: 50%;
-      border: 3px solid var(--accent-cyan);
-      box-shadow: 0 0 24px rgba(6, 182, 212, 0.4);
-      margin-bottom: 16px;
+      border: 2.5px solid var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+      margin-bottom: 14px;
       object-fit: cover;
     }
 
     .dev-name {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: #fff;
+      margin-bottom: 4px;
     }
 
     .dev-role {
       color: var(--accent-cyan);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 12px;
     }
 
     .dev-bio {
       color: var(--text-muted);
-      font-size: 0.9rem;
-      max-width: 500px;
-      margin-bottom: 24px;
+      font-size: 0.88rem;
+      max-width: 460px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      padding: 0 8px;
     }
 
     .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
       width: 100%;
+      max-width: 480px;
+    }
+
+    @media (min-width: 480px) {
+      .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .btn-contact {
       display: flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.05);
+      justify-content: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border-card);
-      color: #E2E8F0;
-      padding: 8px 16px;
-      border-radius: 99px;
-      font-size: 0.85rem;
+      color: var(--text-sub);
+      padding: 10px 8px;
+      border-radius: 12px;
+      font-size: 0.82rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.2s ease;
+      min-height: 42px;
     }
 
-    .btn-contact:hover {
+    .btn-contact:active, .btn-contact:hover {
       background: rgba(6, 182, 212, 0.15);
       border-color: var(--accent-cyan);
       color: #fff;
-      transform: translateY(-2px);
     }
 
     /* Footer */
     footer {
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #64748B;
-      padding: 24px;
+      padding: 20px;
       width: 100%;
+      line-height: 1.6;
     }
 
-    /* Responsive */
-    @media (max-width: 640px) {
-      .hero-title { font-size: 2.3rem; }
-      .steps-row { flex-direction: column; gap: 16px; }
-      .btn-download { font-size: 1.1rem; padding: 16px 20px; }
-      .download-card { padding: 24px 16px; }
+    /* Sticky Bottom Bar for Mobile Quick Action */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(7, 9, 14, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border-card);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .sticky-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sticky-info img {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+    }
+
+    .sticky-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .sticky-sub {
+      font-size: 0.74rem;
+      color: var(--accent-cyan);
+    }
+
+    .btn-sticky-download {
+      background: linear-gradient(135deg, #06B6D4, #10B981);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 99px;
+      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
   </style>
 </head>
 <body>
 
-  <div class="ambient-sphere"></div>
-
   <div class="container">
     
-    <!-- Top Header Navigation -->
+    <!-- Top Header -->
     <header>
       <a href="https://github.com/heyapuu" class="brand-identity" target="_blank" rel="noopener">
-        <img src="assets/brand_logo.png" alt="ReSeen Logo">
+        <img src="assets/brand_logo.png" alt="Root Access Lab Logo">
         <span>Root Access Lab</span>
       </a>
       <div class="badge-hub">
         <span class="pulse-dot"></span>
-        v1.0.0 Verified
+        v1.0.0 Stable
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Showcase -->
     <section class="hero">
       <div class="app-icon-wrapper">
         <img src="assets/reseen_logo.png" alt="ReSeen Official Icon" class="app-icon">
@@ -519,10 +666,10 @@
       <h1 class="hero-title">ReSeen</h1>
       <p class="hero-tagline">Never Miss What Was Said.</p>
       <p class="hero-desc">
-        The ultimate privacy-first offline deleted chat and media recovery engine for WhatsApp, Messenger, Telegram, and Instagram. Built with zero-leak architecture.
+        Privacy-first offline deleted chat and media recovery engine for WhatsApp, Messenger, Telegram & Instagram. 100% on-device zero-leak architecture.
       </p>
 
-      <!-- Main Download Action Card -->
+      <!-- Main Download Card -->
       <div class="download-card">
         <a href="ReSeen/v1.0.0/ReSeen-v1.0.0.apk" class="btn-download" download="ReSeen-v1.0.0.apk">
           <svg viewBox="0 0 24 24">
@@ -533,88 +680,129 @@
           Download Official APK
         </a>
         
-        <div class="meta-specs">
-          <div class="spec-item">📦 Version: <strong>v1.0.0 (Release)</strong></div>
-          <div class="spec-item">⚡ Size: <strong>69.0 MB</strong></div>
-          <div class="spec-item">🤖 Support: <strong>Android 7.0 - 15</strong></div>
-          <div class="spec-item">🛡️ Architecture: <strong>arm64-v8a (Optimized)</strong></div>
+        <div class="meta-badges">
+          <div class="spec-pill">📦 Version: <strong>v1.0.0</strong></div>
+          <div class="spec-pill">⚡ Size: <strong>69.0 MB</strong></div>
+          <div class="spec-pill">🛡️ Architecture: <strong>arm64-v8a</strong></div>
+          <div class="spec-pill">🤖 Support: <strong>Android 7 - 15</strong></div>
+        </div>
+
+        <div class="sub-actions">
+          <a href="https://t.me/heyapuu" class="btn-sub" target="_blank" rel="noopener">
+            ✈️ Join Telegram Channel
+          </a>
+          <a href="https://github.com/heyapuu/RootAccessLab-Apps" class="btn-sub" target="_blank" rel="noopener">
+            🐙 GitHub Source Hub
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Key App Features -->
-    <h2 class="section-title">Key Core Capabilities</h2>
+    <!-- Core Capabilities Grid -->
+    <h2 class="section-title">Core Features & Innovations</h2>
     <div class="grid-features">
+      
       <div class="feature-card">
-        <div class="feature-icon">🛡️</div>
-        <h3 class="feature-title">Zero-Leak Local Vault</h3>
-        <p class="feature-desc">100% on-device capture without any cloud server uploads. Your private chats and media never leave your phone.</p>
+        <div class="feature-header">
+          <div class="feature-icon-box">🛡️</div>
+          <div>
+            <h3 class="feature-title">Zero-Leak Local Vault</h3>
+          </div>
+          <span class="feature-tag">100% Offline</span>
+        </div>
+        <p class="feature-desc">All messages and media are stored exclusively in your phone's encrypted SQLite database. Zero telemetry, zero cloud uploads.</p>
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">📸</div>
-        <h3 class="feature-title">Universal Media Hub</h3>
-        <p class="feature-desc">Instantly catches unsend and deleted photos, voice notes, stickers, and videos before they vanish.</p>
+        <div class="feature-header">
+          <div class="feature-icon-box">📸</div>
+          <div>
+            <h3 class="feature-title">Universal Media Hub</h3>
+          </div>
+          <span class="feature-tag">Unsend Recovery</span>
+        </div>
+        <p class="feature-desc">Instantly catches and archives deleted photos, voice notes, stickers, videos, and view-once images before they disappear.</p>
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🧠</div>
-        <h3 class="feature-title">Cognitive Sentinel AI</h3>
-        <p class="feature-desc">On-device cognitive intelligence that flags spam behavior, generates insight summaries, and keeps you safe.</p>
+        <div class="feature-header">
+          <div class="feature-icon-box">🧠</div>
+          <div>
+            <h3 class="feature-title">Cognitive Sentinel AI</h3>
+          </div>
+          <span class="feature-tag">On-Device AI</span>
+        </div>
+        <p class="feature-desc">Analyzes behavioral conversation dynamics, identifies high-frequency chatters, and flags deceptive or spam interactions locally.</p>
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <h3 class="feature-title">12 Heritage Themes</h3>
-        <p class="feature-desc">Handcrafted Bengali heritage art styles including Jamdani, Krishnachura, Shimul, Nakshikantha, and Cyberpunk.</p>
+        <div class="feature-header">
+          <div class="feature-icon-box">🎨</div>
+          <div>
+            <h3 class="feature-title">12 Heritage Themes</h3>
+          </div>
+          <span class="feature-tag">Cyberpunk OLED</span>
+        </div>
+        <p class="feature-desc">Handcrafted Bengali heritage art themes: Jamdani, Krishnachura, Shimul, Nakshikantha, Mati, Shapla, and pure OLED dark modes.</p>
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3 class="feature-title">Biometric App Vault</h3>
-        <p class="feature-desc">Hardened app protection with custom Pattern lock, 4-digit PIN, Fingerprint, and Face ID authorization.</p>
+        <div class="feature-header">
+          <div class="feature-icon-box">🔒</div>
+          <div>
+            <h3 class="feature-title">Biometric Vault Lock</h3>
+          </div>
+          <span class="feature-tag">Hardware Protected</span>
+        </div>
+        <p class="feature-desc">Shield your private recovered messages with custom Pattern Lock, 4-digit PIN, Fingerprint, and Face ID biometric authentication.</p>
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🎁</div>
-        <h3 class="feature-title">1-Month Pro Referral</h3>
-        <p class="feature-desc">Invite friends and unlock full 30-day Pro VIP features with zero data loss on renewal or demotion.</p>
+        <div class="feature-header">
+          <div class="feature-icon-box">🎁</div>
+          <div>
+            <h3 class="feature-title">1-Month Pro VIP</h3>
+          </div>
+          <span class="feature-tag">Referral Gift</span>
+        </div>
+        <p class="feature-desc">Invite friends with your referral link to unlock full 30-day Pro VIP features with unconditional zero-data-loss protection on expiry.</p>
       </div>
+
     </div>
 
-    <!-- Quick Install Guide -->
+    <!-- Quick 3-Step Install Guide -->
     <div class="guide-box">
-      <h3 style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 700; text-align: center; color: #fff;">
+      <h3 style="font-family: 'Outfit'; font-size: 1.15rem; font-weight: 700; text-align: center; color: #fff;">
         Quick 3-Step Installation
       </h3>
-      <div class="steps-row">
+      <div class="steps-list">
         <div class="step-item">
           <div class="step-number">1</div>
-          <p class="step-text">Tap <strong>"Download Official APK"</strong> above to save the 69 MB package.</p>
+          <p class="step-text">Tap <strong>"Download Official APK"</strong> above to save the 69 MB file.</p>
         </div>
         <div class="step-item">
           <div class="step-number">2</div>
-          <p class="step-text">Open the downloaded file from your notification bar or Downloads folder.</p>
+          <p class="step-text">Open the downloaded file from your <strong>Notification Bar</strong> or Downloads.</p>
         </div>
         <div class="step-item">
           <div class="step-number">3</div>
-          <p class="step-text">Tap <strong>Install</strong> (Allow <em>"Install unknown apps"</em> if prompted by Android).</p>
+          <p class="step-text">Tap <strong>Install</strong> (Allow <em>"Install unknown apps"</em> if prompted).</p>
         </div>
       </div>
     </div>
 
-    <!-- Developer & Organization Profile -->
+    <!-- Developer & Lab Profile -->
     <div class="lab-card">
       <img src="assets/heyapuu.png" alt="Aniquzzaman Apu" class="avatar">
       <h3 class="dev-name">Aniquzzaman Apu</h3>
-      <p class="dev-role">Founder & Lead Engineer @ Root Access Lab</p>
+      <p class="dev-role">Founder & Lead Systems Architect @ Root Access Lab</p>
       <p class="dev-bio">
         Dedicated to building privacy-respecting, high-performance mobile systems, security utilities, and human-centric software.
       </p>
 
       <div class="contact-grid">
-        <a href="https://t.me/heyapuu" class="btn-contact" target="_blank" rel="noopener">✈️ Telegram (@heyapuu)</a>
-        <a href="https://wa.me/8801841090207" class="btn-contact" target="_blank" rel="noopener">📱 WhatsApp (+880 1841-090207)</a>
+        <a href="https://t.me/heyapuu" class="btn-contact" target="_blank" rel="noopener">✈️ Telegram</a>
+        <a href="https://wa.me/8801841090207" class="btn-contact" target="_blank" rel="noopener">📱 WhatsApp</a>
         <a href="https://m.me/heyapuuu" class="btn-contact" target="_blank" rel="noopener">💬 Messenger</a>
         <a href="https://facebook.com/heyapuuu" class="btn-contact" target="_blank" rel="noopener">🌐 Facebook</a>
         <a href="https://github.com/heyapuu" class="btn-contact" target="_blank" rel="noopener">🐙 GitHub</a>
@@ -628,6 +816,25 @@
       Engineered with ❤️ for unconditional digital privacy.
     </footer>
 
+  </div>
+
+  <!-- Mobile Sticky Bottom Download Bar -->
+  <div class="mobile-sticky-bar">
+    <div class="sticky-info">
+      <img src="assets/reseen_logo.png" alt="ReSeen Logo">
+      <div>
+        <div class="sticky-title">ReSeen v1.0.0</div>
+        <div class="sticky-sub">Official APK (69 MB)</div>
+      </div>
+    </div>
+    <a href="ReSeen/v1.0.0/ReSeen-v1.0.0.apk" class="btn-sticky-download" download="ReSeen-v1.0.0.apk">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download
+    </a>
   </div>
 
 </body>
