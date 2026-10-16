@@ -4,10 +4,10 @@
   ### Never Miss What Was Said.
   **The Sovereign, Privacy-First Deleted Chat & Media Recovery Engine for Android**
 
-  [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/heyapuu/RootAccessLab-App)
-  [![Security](https://img.shields.io/badge/Architecture-Zero--Leak%20Vault-10B981?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/heyapuu/RootAccessLab-App)
+  [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/heyapuu/RootAccessLab-Apps)
+  [![Security](https://img.shields.io/badge/Architecture-Zero--Leak%20Vault-10B981?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/heyapuu/RootAccessLab-Apps)
   [![Developer](https://img.shields.io/badge/Developer-Root%20Access%20Lab-6366F1?style=for-the-badge&logo=codeforces&logoColor=white)](https://github.com/heyapuu)
-  [![Version](https://img.shields.io/badge/Version-v1.0.0-F59E0B?style=for-the-badge)](https://github.com/heyapuu/RootAccessLab-App)
+  [![Version](https://img.shields.io/badge/Version-v1.0.0-F59E0B?style=for-the-badge)](https://github.com/heyapuu/RootAccessLab-Apps)
 
   <p align="center">
     <a href="#-overview">Overview</a> •

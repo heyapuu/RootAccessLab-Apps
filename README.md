@@ -45,7 +45,7 @@
 ## 📂 Repository Directory Structure
 
 ```text
-RootAccessLab-App/
+RootAccessLab-Apps/
 ├── README.md                          <-- (Main Hub Index)
 └── ReSeen/                            <-- (ReSeen Application Directory)
     ├── README.md                      <-- (Detailed App Documentation)
