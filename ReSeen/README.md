@@ -4,10 +4,10 @@
   ### Never Miss What Was Said.
   **The Sovereign, Privacy-First Deleted Chat & Media Recovery Engine for Android**
 
-  [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/heyapuu/RootAccessLab-Apps)
-  [![Security](https://img.shields.io/badge/Architecture-Zero--Leak%20Vault-10B981?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/heyapuu/RootAccessLab-Apps)
-  [![Developer](https://img.shields.io/badge/Developer-Root%20Access%20Lab-6366F1?style=for-the-badge&logo=codeforces&logoColor=white)](https://github.com/heyapuu)
-  [![Version](https://img.shields.io/badge/Version-v1.0.0-F59E0B?style=for-the-badge)](https://github.com/heyapuu/RootAccessLab-Apps)
+  <img src="https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Platform Android" />
+  <a href="#-zero-leak-privacy-guarantee"><img src="https://img.shields.io/badge/Architecture-Zero--Leak%20Vault-10B981?style=for-the-badge&logo=shield&logoColor=white" alt="Zero-Leak Vault" /></a>
+  <a href="https://github.com/heyapuu"><img src="https://img.shields.io/badge/Developer-Root%20Access%20Lab-6366F1?style=for-the-badge&logo=codeforces&logoColor=white" alt="Root Access Lab" /></a>
+  <img src="https://img.shields.io/badge/Version-v1.0.0-F59E0B?style=for-the-badge" alt="Version 1.0.0" />
 
   <p align="center">
     <a href="#-overview">Overview</a> •
@@ -98,12 +98,18 @@ Unlike conventional recovery apps that scrape your contacts or upload your perso
 
 ## 👨‍💻 Developer & Support
 
-Developed with passion by **Root Access Lab**.
+Developed with passion by **Aniquzzaman Apu** (Root Access Lab).
 
-* 🌐 **GitHub**: [@heyapuu](https://github.com/heyapuu)
-* 💬 **Messenger**: [m.me/heyapuuu](https://m.me/heyapuuu)
-* 📱 **WhatsApp**: [Chat with Developer](https://wa.me/8801932313620)
-* 📧 **Email**: `rootaccesslab@gmail.com`
+| Channel | Handle / Contact | Direct Link |
+|:---|:---|:---:|
+| 💬 **Messenger** | `m.me/heyapuuu` | [Send Message](https://m.me/heyapuuu) |
+| 📱 **WhatsApp** | `+880 1841-090207` | [Chat on WhatsApp](https://wa.me/8801841090207) |
+| ✈️ **Telegram** | `@heyapuu` | [Open Telegram](https://t.me/heyapuu) |
+| 🌐 **Facebook** | `facebook.com/heyapuuu` | [View Profile](https://www.facebook.com/heyapuuu) |
+| 📸 **Instagram** | `@heyapuuu` | [View Instagram](https://www.instagram.com/heyapuuu) |
+| 💼 **LinkedIn** | `linkedin.com/in/heyapuu` | [Connect on LinkedIn](https://www.linkedin.com/in/heyapuu/) |
+| 🐙 **GitHub** | `@heyapuu` | [Follow on GitHub](https://github.com/heyapuu) |
+| 📧 **Email** | `aniq.apu07@gmail.com` | [Send Email](mailto:aniq.apu07@gmail.com) |
 
 ---
 

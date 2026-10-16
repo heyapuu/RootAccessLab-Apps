@@ -2,10 +2,10 @@
 
 <div align="center">
 
-  [![Organization](https://img.shields.io/badge/Organization-Root%20Access%20Lab-6366F1?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/heyapuu)
-  [![Platform](https://img.shields.io/badge/Ecosystem-Android%20OS-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/heyapuu)
-  [![Security](https://img.shields.io/badge/Security-Zero--Leak%20Verified-10B981?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/heyapuu)
-  [![Maintained](https://img.shields.io/badge/Status-Actively%20Maintained-F59E0B?style=for-the-badge)](https://github.com/heyapuu)
+  <a href="https://github.com/heyapuu"><img src="https://img.shields.io/badge/Organization-Root%20Access%20Lab-6366F1?style=for-the-badge&logo=shield&logoColor=white" alt="Root Access Lab" /></a>
+  <img src="https://img.shields.io/badge/Ecosystem-Android%20OS-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android Ecosystem" />
+  <a href="#-security--privacy-standard"><img src="https://img.shields.io/badge/Security-Zero--Leak%20Verified-10B981?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Zero-Leak Verified" /></a>
+  <img src="https://img.shields.io/badge/Status-Actively%20Maintained-F59E0B?style=for-the-badge" alt="Actively Maintained" />
 
   <p align="center">
     Welcome to the official public distribution repository for <b>Root Access Lab</b> mobile applications.<br>
@@ -18,7 +18,7 @@
 
 ## 📱 Official Applications Catalog
 
-| Application | Latest Version | Category | Status | Documentation & Downloads |
+| Application | Latest Version | Category | Status | Documentation & Directory |
 |:---|:---:|:---:|:---:|:---:|
 | 👁️ **[ReSeen](#-reseen--never-miss-what-was-said)** | `v1.0.0` | Privacy & Utilities | 🟢 Official Release | [View ReSeen Details](ReSeen/) |
 | 🛡️ **Upcoming App** | `---` | Security Tools | 🟡 In Development | *Stay tuned* |
@@ -66,10 +66,18 @@ Every APK published in this repository complies with:
 
 ## 👨‍💻 Developer & Community
 
-* **Developer:** Root Access Lab ([@heyapuu](https://github.com/heyapuu))
-* **Messenger Support:** [m.me/heyapuuu](https://m.me/heyapuuu)
-* **WhatsApp Community:** [Chat with Developer](https://wa.me/8801932313620)
-* **Email Support:** `rootaccesslab@gmail.com`
+Root Access Lab applications are founded, designed, and developed by **Aniquzzaman Apu**.
+
+| Channel | Handle / Contact | Direct Link |
+|:---|:---|:---:|
+| 💬 **Messenger** | `m.me/heyapuuu` | [Send Message](https://m.me/heyapuuu) |
+| 📱 **WhatsApp** | `+880 1841-090207` | [Chat on WhatsApp](https://wa.me/8801841090207) |
+| ✈️ **Telegram** | `@heyapuu` | [Open Telegram](https://t.me/heyapuu) |
+| 🌐 **Facebook** | `facebook.com/heyapuuu` | [View Profile](https://www.facebook.com/heyapuuu) |
+| 📸 **Instagram** | `@heyapuuu` | [View Instagram](https://www.instagram.com/heyapuuu) |
+| 💼 **LinkedIn** | `linkedin.com/in/heyapuu` | [Connect on LinkedIn](https://www.linkedin.com/in/heyapuu/) |
+| 🐙 **GitHub** | `@heyapuu` | [Follow on GitHub](https://github.com/heyapuu) |
+| 📧 **Email** | `aniq.apu07@gmail.com` | [Send Email](mailto:aniq.apu07@gmail.com) |
 
 ---
 
