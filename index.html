@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReSeen — Never Miss What Was Said | Official Download</title>
+  
+  <!-- SEO & Social OpenGraph Meta Tags -->
+  <meta name="description" content="Download ReSeen v1.0.0 — Privacy-first deleted message and media recovery engine with 100% on-device zero-leak guarantee by Root Access Lab.">
+  <meta property="og:title" content="ReSeen — Never Miss What Was Said">
+  <meta property="og:description" content="Official APK Download for ReSeen v1.0.0. 100% on-device offline deleted chat & media recovery.">
+  <meta property="og:image" content="assets/reseen_logo.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0B0F19">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #07090E;
+      --bg-card: rgba(18, 24, 38, 0.7);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --accent-cyan: #06B6D4;
+      --accent-emerald: #10B981;
+      --accent-purple: #8B5CF6;
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --gradient-glow: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.18) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 80%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: var(--gradient-glow);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Ambient Background Light */
+    .ambient-sphere {
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.12) 40%, transparent 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Top Brand Nav */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-card);
+      border-radius: 99px;
+      margin-bottom: 48px;
+    }
+
+    .brand-identity {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-identity img {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
+    }
+
+    .brand-identity span {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-hub {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34D399;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10B981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10B981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    .app-icon-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(6, 182, 212, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .app-icon:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      margin-bottom: 8px;
+      background: linear-gradient(180deg, #FFFFFF 20%, #CBD5E1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-bottom: 16px;
+      letter-spacing: -0.2px;
+    }
+
+    .hero-desc {
+      max-width: 580px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 32px;
+    }
+
+    /* Download Action Button */
+    .download-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      backdrop-filter: blur(25px);
+      border: 1px solid var(--border-card);
+      border-radius: 24px;
+      padding: 32px;
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 64px;
+    }
+
+    .download-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-emerald), transparent);
+    }
+
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      background: linear-gradient(135deg, #06B6D4 0%, #0284C7 50%, #10B981 100%);
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 18px 28px;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(6, 182, 212, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(6, 182, 212, 0.5);
+      filter: brightness(1.08);
+    }
+
+    .btn-download svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
+    }
+
+    .meta-specs {
+      display: flex;
+      gap: 16px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .spec-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .spec-item strong {
+      color: #E2E8F0;
+    }
+
+    /* Features Grid */
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 32px;
+      background: linear-gradient(135deg, #fff, #94A3B8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 64px;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(16px);
+    }
+
+    .feature-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: inline-block;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .feature-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* 3-Step Install Guide */
+    .guide-box {
+      width: 100%;
+      max-width: 720px;
+      background: rgba(18, 24, 38, 0.5);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 64px;
+    }
+
+    .steps-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 10px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .step-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Developer & Lab Showcase */
+    .lab-card {
+      width: 100%;
+      max-width: 720px;
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 24px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-cyan);
+      box-shadow: 0 0 24px rgba(6, 182, 212, 0.4);
+      margin-bottom: 16px;
+      object-fit: cover;
+    }
+
+    .dev-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .dev-role {
+      color: var(--accent-cyan);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .dev-bio {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 500px;
+      margin-bottom: 24px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .btn-contact {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      color: #E2E8F0;
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-contact:hover {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: var(--accent-cyan);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #64748B;
+      padding: 24px;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero-title { font-size: 2.3rem; }
+      .steps-row { flex-direction: column; gap: 16px; }
+      .btn-download { font-size: 1.1rem; padding: 16px 20px; }
+      .download-card { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-sphere"></div>
+
+  <div class="container">
+    
+    <!-- Top Header Navigation -->
+    <header>
+      <a href="https://github.com/heyapuu" class="brand-identity" target="_blank" rel="noopener">
+        <img src="assets/brand_logo.png" alt="ReSeen Logo">
+        <span>Root Access Lab</span>
+      </a>
+      <div class="badge-hub">
+        <span class="pulse-dot"></span>
+        v1.0.0 Verified
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="app-icon-wrapper">
+        <img src="assets/reseen_logo.png" alt="ReSeen Official Icon" class="app-icon">
+      </div>
+      <h1 class="hero-title">ReSeen</h1>
+      <p class="hero-tagline">Never Miss What Was Said.</p>
+      <p class="hero-desc">
+        The ultimate privacy-first offline deleted chat and media recovery engine for WhatsApp, Messenger, Telegram, and Instagram. Built with zero-leak architecture.
+      </p>
+
+      <!-- Main Download Action Card -->
+      <div class="download-card">
+        <a href="ReSeen/v1.0.0/ReSeen-v1.0.0.apk" class="btn-download" download="ReSeen-v1.0.0.apk">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Official APK
+        </a>
+        
+        <div class="meta-specs">
+          <div class="spec-item">📦 Version: <strong>v1.0.0 (Release)</strong></div>
+          <div class="spec-item">⚡ Size: <strong>69.0 MB</strong></div>
+          <div class="spec-item">🤖 Support: <strong>Android 7.0 - 15</strong></div>
+          <div class="spec-item">🛡️ Architecture: <strong>arm64-v8a (Optimized)</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key App Features -->
+    <h2 class="section-title">Key Core Capabilities</h2>
+    <div class="grid-features">
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3 class="feature-title">Zero-Leak Local Vault</h3>
+        <p class="feature-desc">100% on-device capture without any cloud server uploads. Your private chats and media never leave your phone.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3 class="feature-title">Universal Media Hub</h3>
+        <p class="feature-desc">Instantly catches unsend and deleted photos, voice notes, stickers, and videos before they vanish.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3 class="feature-title">Cognitive Sentinel AI</h3>
+        <p class="feature-desc">On-device cognitive intelligence that flags spam behavior, generates insight summaries, and keeps you safe.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3 class="feature-title">12 Heritage Themes</h3>
+        <p class="feature-desc">Handcrafted Bengali heritage art styles including Jamdani, Krishnachura, Shimul, Nakshikantha, and Cyberpunk.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">Biometric App Vault</h3>
+        <p class="feature-desc">Hardened app protection with custom Pattern lock, 4-digit PIN, Fingerprint, and Face ID authorization.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3 class="feature-title">1-Month Pro Referral</h3>
+        <p class="feature-desc">Invite friends and unlock full 30-day Pro VIP features with zero data loss on renewal or demotion.</p>
+      </div>
+    </div>
+
+    <!-- Quick Install Guide -->
+    <div class="guide-box">
+      <h3 style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 700; text-align: center; color: #fff;">
+        Quick 3-Step Installation
+      </h3>
+      <div class="steps-row">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <p class="step-text">Tap <strong>"Download Official APK"</strong> above to save the 69 MB package.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <p class="step-text">Open the downloaded file from your notification bar or Downloads folder.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <p class="step-text">Tap <strong>Install</strong> (Allow <em>"Install unknown apps"</em> if prompted by Android).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Developer & Organization Profile -->
+    <div class="lab-card">
+      <img src="assets/heyapuu.png" alt="Aniquzzaman Apu" class="avatar">
+      <h3 class="dev-name">Aniquzzaman Apu</h3>
+      <p class="dev-role">Founder & Lead Engineer @ Root Access Lab</p>
+      <p class="dev-bio">
+        Dedicated to building privacy-respecting, high-performance mobile systems, security utilities, and human-centric software.
+      </p>
+
+      <div class="contact-grid">
+        <a href="https://t.me/heyapuu" class="btn-contact" target="_blank" rel="noopener">✈️ Telegram (@heyapuu)</a>
+        <a href="https://wa.me/8801841090207" class="btn-contact" target="_blank" rel="noopener">📱 WhatsApp (+880 1841-090207)</a>
+        <a href="https://m.me/heyapuuu" class="btn-contact" target="_blank" rel="noopener">💬 Messenger</a>
+        <a href="https://facebook.com/heyapuuu" class="btn-contact" target="_blank" rel="noopener">🌐 Facebook</a>
+        <a href="https://github.com/heyapuu" class="btn-contact" target="_blank" rel="noopener">🐙 GitHub</a>
+        <a href="mailto:aniq.apu07@gmail.com" class="btn-contact">📧 Email</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      Copyright © 2026 Root Access Lab. All rights reserved.<br>
+      Engineered with ❤️ for unconditional digital privacy.
+    </footer>
+
+  </div>
+
+</body>
+</html>
