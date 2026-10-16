@@ -1,5 +1,5 @@
 {
-  "latest_version": "1.0.2",
-  "download_url": "https://github.com/heyapuu/RootAccessLab-Apps/raw/main/ReSeen/v1.0.2/ReSeen-v1.0.2.apk",
-  "release_notes": "🎉 ReSeen v1.0.2 Update:\n• In-App Seamless Background Updater: Automatic download with real-time progress bar & 1-tap install\n• Pro Plan Hierarchy & Upgrade System: Active tier pre-selection, locked lower plans, & 1-tap/double-tap instant gateway upgrade\n• Referral Self-Claim Guard: Prevents accidental self-referral redemption\n• Xiaomi / HyperOS & Android 13+ Notification Access Fix\n• Group Chats: Sender name & color identity\n• High-performance 69MB optimized release"
+  "latest_version": "1.0.3",
+  "download_url": "https://github.com/heyapuu/RootAccessLab-Apps/raw/main/ReSeen/v1.0.3/ReSeen-v1.0.3.apk",
+  "release_notes": "🎉 ReSeen v1.0.3 Universal Device Compatibility Release:\n• Full Huawei (EMUI / HarmonyOS) & Android 9-12 Support: Fixed fatal NoSuchMethodError parcelable & biometric crashes\n• Bulletproof Notification Interception: Universal SafeCompat layer guarantees zero crash rate on all Android devices\n• Enhanced OEM Autostart: Direct deep-linking for Huawei Phone Manager & background persistence\n• Performance & Diagnostics: Removed artificial startup handshake events, ultra-stable release"
 }
