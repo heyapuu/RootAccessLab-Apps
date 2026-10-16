@@ -12,6 +12,14 @@
     All apps released here are thoroughly scanned, signed, and built under our strict <b>Zero-Leak Privacy Guarantee</b>.
   </p>
 
+  <br>
+  <a href="https://heyapuu.github.io/RootAccessLab-Apps/">
+    <img src="https://img.shields.io/badge/⚡_DOWNLOAD_RESEEN_APK-v1.0.0_(69_MB)-06B6D4?style=for-the-badge&logo=android&logoColor=white" height="42" alt="Download APK" />
+  </a>
+  <br><br>
+  <p>🌐 <b><a href="https://heyapuu.github.io/RootAccessLab-Apps/">Open Official Download Portal & Showcase</a></b></p>
+  <p>📥 <b><a href="https://github.com/heyapuu/RootAccessLab-Apps/raw/main/ReSeen/v1.0.0/ReSeen-v1.0.0.apk">Direct 1-Click APK Download (69 MB)</a></b></p>
+
 </div>
 
 ---
