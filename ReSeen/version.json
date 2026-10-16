@@ -1,5 +1,5 @@
 {
-  "latest_version": "1.0.3",
-  "download_url": "https://github.com/heyapuu/RootAccessLab-Apps/raw/main/ReSeen/v1.0.3/ReSeen-v1.0.3.apk",
-  "release_notes": "🎉 ReSeen v1.0.3 Universal Device Compatibility Release:\n• Full Huawei (EMUI / HarmonyOS) & Android 9-12 Support: Fixed fatal NoSuchMethodError parcelable & biometric crashes\n• Bulletproof Notification Interception: Universal SafeCompat layer guarantees zero crash rate on all Android devices\n• Enhanced OEM Autostart: Direct deep-linking for Huawei Phone Manager & background persistence\n• Performance & Diagnostics: Removed artificial startup handshake events, ultra-stable release"
+  "latest_version": "1.0.4",
+  "download_url": "https://github.com/heyapuu/RootAccessLab-Apps/raw/main/ReSeen/v1.0.4/ReSeen-v1.0.4.apk",
+  "release_notes": "🎉 ReSeen v1.0.4 Precision Interception & Xiaomi HyperOS Master Release:\n• Redmi & Xiaomi Progressive Permission Flow: Sideloaded Restricted Settings resolution with native MIUI Security app & Special App Access fallbacks (solves missing 3-dots on Redmi 11+)\n• Strict Exact Chat Name Matching: Completely eliminates contact name cross-talk & phantom group conversion\n• Universal Phantom Status Filter: Automatically suppresses 'Your photo was sent', 'Downloading...', 'Photo saved', and background status notifications without losing real messages\n• Instant Cloud License & Fleet Presence Sync: Authoritatively preserves Pro status on app clear data and reinstall so Admin Console accurately tracks VIP devices\n• Referral Fleet Leaderboard: Full ranked leaderboard with gold/silver/bronze medals, search, and device breakdown\n• Massive App Size Optimization: Reduced asset footprint by over 21MB for instant loading and lighter memory footprint"
 }
