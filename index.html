@@ -638,7 +638,78 @@
       box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
       display: flex;
       align-items: center;
+    /* VIP Referral Banner */
+    .vip-referral-banner {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.16) 0%, rgba(217, 119, 6, 0.08) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       gap: 6px;
+      box-shadow: 0 0 25px rgba(245, 158, 11, 0.18);
+    }
+    .vip-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #000;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      padding: 3px 12px;
+      border-radius: 99px;
+    }
+    .vip-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #FCD34D;
+      letter-spacing: -0.2px;
+    }
+    .vip-desc {
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+    .vip-code-pill {
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px dashed rgba(245, 158, 11, 0.6);
+      padding: 8px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .vip-code-pill:hover, .vip-code-pill:active {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: #F59E0B;
+    }
+    .vip-code-pill span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+    .vip-code-pill strong {
+      font-family: monospace;
+      font-size: 1.1rem;
+      color: #38BDF8;
+      letter-spacing: 1px;
+    }
+    .copy-hint {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38BDF8;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -654,7 +725,7 @@
       </a>
       <div class="badge-hub">
         <span class="pulse-dot"></span>
-        v1.0.1 Stable
+        v1.0.4 Stable
       </div>
     </header>
 
@@ -671,7 +742,19 @@
 
       <!-- Main Download Card -->
       <div class="download-card">
-        <a href="ReSeen/v1.0.3/ReSeen-v1.0.3.apk" class="btn-download" download="ReSeen-v1.0.3.apk">
+        <!-- VIP Referral Banner (Shown when ?ref= is present) -->
+        <div id="vipReferralBanner" class="vip-referral-banner" style="display: none;">
+          <div class="vip-badge">👑 VIP INVITATION UNLOCKED</div>
+          <div class="vip-title">Special Friend Invite Applied!</div>
+          <div class="vip-desc">Install ReSeen and launch to claim <strong>1 Month of Pro VIP for FREE</strong>.</div>
+          <div class="vip-code-pill" onclick="copyReferralCode(event)">
+            <span>Referral Code:</span>
+            <strong id="displayRefCode">RS-XXXXXX</strong>
+            <span class="copy-hint" id="copyHintBtn">📋 Copy</span>
+          </div>
+        </div>
+
+        <a href="ReSeen/v1.0.4/ReSeen-v1.0.4.apk" class="btn-download" download="ReSeen-v1.0.4.apk">
           <svg viewBox="0 0 24 24">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
@@ -681,8 +764,8 @@
         </a>
         
         <div class="meta-badges">
-          <div class="spec-pill">📦 Version: <strong>v1.0.3</strong></div>
-          <div class="spec-pill">⚡ Size: <strong>69.1 MB</strong></div>
+          <div class="spec-pill">📦 Version: <strong>v1.0.4</strong></div>
+          <div class="spec-pill">⚡ Size: <strong>47.3 MB (Compressed)</strong></div>
           <div class="spec-pill">🛡️ Architecture: <strong>arm64-v8a</strong></div>
           <div class="spec-pill">🤖 Support: <strong>Android 7 - 16</strong></div>
         </div>
@@ -823,11 +906,11 @@
     <div class="sticky-info">
       <img src="assets/reseen_logo.png" alt="ReSeen Logo">
       <div>
-        <div class="sticky-title">ReSeen v1.0.3</div>
-        <div class="sticky-sub">Official APK (69 MB)</div>
+        <div class="sticky-title">ReSeen v1.0.4</div>
+        <div class="sticky-sub">Official APK (47.3 MB)</div>
       </div>
     </div>
-    <a href="ReSeen/v1.0.3/ReSeen-v1.0.3.apk" class="btn-sticky-download" download="ReSeen-v1.0.3.apk">
+    <a href="ReSeen/v1.0.4/ReSeen-v1.0.4.apk" class="btn-sticky-download" download="ReSeen-v1.0.4.apk">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
         <polyline points="7 10 12 15 17 10"></polyline>
@@ -836,6 +919,66 @@
       Download
     </a>
   </div>
+
+  <script>
+    let activeRefCode = null;
+    function initReferral() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const ref = urlParams.get('ref') || urlParams.get('code') || urlParams.get('invite');
+      if (ref && /^RS-[A-Z0-9]{6}$/i.test(ref.trim())) {
+        activeRefCode = ref.trim().toUpperCase();
+        const banner = document.getElementById('vipReferralBanner');
+        const displayCode = document.getElementById('displayRefCode');
+        if (banner && displayCode) {
+          displayCode.textContent = activeRefCode;
+          banner.style.display = 'flex';
+        }
+      }
+    }
+
+    function copyReferralCode(e) {
+      if (e) e.stopPropagation();
+      if (!activeRefCode) return;
+      navigator.clipboard.writeText(activeRefCode).then(() => {
+        showToast('🎉 VIP Code ' + activeRefCode + ' copied! Open ReSeen after install to activate.');
+        const hint = document.getElementById('copyHintBtn');
+        if (hint) hint.textContent = '✅ Copied!';
+      }).catch(() => {
+        prompt('Copy your VIP code:', activeRefCode);
+      });
+    }
+
+    function handleDownloadClick(e) {
+      if (activeRefCode) {
+        navigator.clipboard.writeText(activeRefCode).then(() => {
+          showToast('🚀 Downloading v1.0.4! Referral code ' + activeRefCode + ' copied to clipboard.');
+        }).catch(() => {});
+      }
+    }
+
+    function showToast(msg) {
+      let toast = document.getElementById('reseenToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'reseenToast';
+        toast.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#06B6D4,#10B981);color:#fff;padding:12px 24px;border-radius:99px;font-weight:700;font-size:0.9rem;box-shadow:0 8px 24px rgba(0,0,0,0.5);z-index:9999;transition:all 0.3s ease;text-align:center;max-width:90vw;';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(-20px)';
+      }, 4500);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initReferral();
+      const dlBtns = document.querySelectorAll('.btn-download, .btn-sticky-download');
+      dlBtns.forEach(btn => btn.addEventListener('click', handleDownloadClick));
+    });
+  </script>
 
 </body>
 </html>
